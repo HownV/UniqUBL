@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -17,13 +18,26 @@ namespace UniqUBL
         public bool AuthenticateWebSiteUser(string email, string passwordHash)
         {
             var client = new DataAccessServiceClient("BasicHttpBinding_IDataAccessService");
-            User user = client.GetUser(email);
-            return user.PasswordHash.Equals(passwordHash);
+            User[] user = client.GetUser(email);
+            if(user.Length > 1)
+                throw new InvalidDataException();
+            return user[0].PasswordHash.Equals(passwordHash);
         }
 
         public Guid GetTokenAccessForMobileUser(string email, string passwordHash)
         {
             throw new NotImplementedException();
+        }
+
+        public bool RegisterNewUser(string email, string passwordHash)
+        {
+            var client = new DataAccessServiceClient("BasicHttpBinding_IDataAccessService");
+            User[] users = client.GetUser(email);
+            if (users.Length != 0)
+                return false;
+
+            client.AddUser(email, passwordHash);
+            return true;
         }
     }
 }

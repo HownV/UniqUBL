@@ -25,8 +25,21 @@
   <xs:element name="GetUserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UniqUDomainModel.Entities" minOccurs="0" name="GetUserResult" nillable="true" type="q1:User" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UniqUDomainModel.Entities" minOccurs="0" name="GetUserResult" nillable="true" type="q1:ArrayOfUser" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passwordHash" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

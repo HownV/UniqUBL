@@ -117,10 +117,16 @@ namespace UniqUBL.DataAccessService {
         System.Threading.Tasks.Task<string> GetEchoAsync(string echo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetUser", ReplyAction="http://tempuri.org/IDataAccessService/GetUserResponse")]
-        UniqUBL.DataAccessService.User GetUser(string email);
+        UniqUBL.DataAccessService.User[] GetUser(string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/GetUser", ReplyAction="http://tempuri.org/IDataAccessService/GetUserResponse")]
-        System.Threading.Tasks.Task<UniqUBL.DataAccessService.User> GetUserAsync(string email);
+        System.Threading.Tasks.Task<UniqUBL.DataAccessService.User[]> GetUserAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/AddUser", ReplyAction="http://tempuri.org/IDataAccessService/AddUserResponse")]
+        void AddUser(string email, string passwordHash);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataAccessService/AddUser", ReplyAction="http://tempuri.org/IDataAccessService/AddUserResponse")]
+        System.Threading.Tasks.Task AddUserAsync(string email, string passwordHash);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -158,12 +164,20 @@ namespace UniqUBL.DataAccessService {
             return base.Channel.GetEchoAsync(echo);
         }
         
-        public UniqUBL.DataAccessService.User GetUser(string email) {
+        public UniqUBL.DataAccessService.User[] GetUser(string email) {
             return base.Channel.GetUser(email);
         }
         
-        public System.Threading.Tasks.Task<UniqUBL.DataAccessService.User> GetUserAsync(string email) {
+        public System.Threading.Tasks.Task<UniqUBL.DataAccessService.User[]> GetUserAsync(string email) {
             return base.Channel.GetUserAsync(email);
+        }
+        
+        public void AddUser(string email, string passwordHash) {
+            base.Channel.AddUser(email, passwordHash);
+        }
+        
+        public System.Threading.Tasks.Task AddUserAsync(string email, string passwordHash) {
+            return base.Channel.AddUserAsync(email, passwordHash);
         }
     }
 }

@@ -16,5 +16,8 @@ namespace UniqUBL
 
         [OperationContract]
         bool AuthenticateWebSiteUser(string email, string passwordHash);
+
+        [OperationContract]
+        bool RegisterNewUser(string email, string passwordHash);
     }
 }

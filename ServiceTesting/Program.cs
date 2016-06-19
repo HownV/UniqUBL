@@ -15,8 +15,8 @@ namespace ServiceTesting
             //Guid id = Guid.NewGuid();
 
             var client = new DataAccessServiceClient("BasicHttpBinding_IDataAccessService");
-            User user = client.GetUser("qwe@qwe.qwe");
-            string hash1 = user.PasswordHash;
+            User[] users = client.GetUser("qwe@qwe.qwe");
+            string hash1 = users[0].PasswordHash;
 
             //HashAlgorithm hash = SHA512.Create();
             //byte[] b = hash.ComputeHash(Encoding.UTF8.GetBytes("qwe"));
