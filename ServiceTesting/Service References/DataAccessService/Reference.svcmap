@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b9b24971-3332-4ba1-8256-a9a7017f04ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7840/DataAccessService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataAccessService.wsdl" MetadataType="Wsdl" ID="6749eb09-2b07-40dd-a5b4-fdecb1aec080" SourceId="1" SourceUrl="http://localhost:7840/DataAccessService.svc?wsdl" />
+    <MetadataFile FileName="DataAccessService.xsd" MetadataType="Schema" ID="3af014d1-d3fa-4c32-a8fa-0450b41f0825" SourceId="1" SourceUrl="http://localhost:7840/DataAccessService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataAccessService1.xsd" MetadataType="Schema" ID="9a7f84c5-1b4d-451e-af0c-252068f27ca8" SourceId="1" SourceUrl="http://localhost:7840/DataAccessService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataAccessService.disco" MetadataType="Disco" ID="6a460c50-2a3e-4382-8c0c-d6129a578234" SourceId="1" SourceUrl="http://localhost:7840/DataAccessService.svc?disco" />
+    <MetadataFile FileName="DataAccessService2.xsd" MetadataType="Schema" ID="cf7b5646-c397-4558-99a9-c37ce9c42229" SourceId="1" SourceUrl="http://localhost:7840/DataAccessService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

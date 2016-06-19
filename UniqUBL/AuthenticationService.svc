@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="UniqUBL.AuthenticationService" CodeBehind="AuthenticationService.svc.cs" %>
